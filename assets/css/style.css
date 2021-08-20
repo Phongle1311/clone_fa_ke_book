@@ -1,0 +1,130 @@
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4.9rem;
+  z-index: 2;
+}
+#navbar a,
+#navbar > div {
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dropdown-hover {
+  position: relative;
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  min-width: 30rem;
+  left: 0;
+  top: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.dropdown-hover:hover .dropdown-menu {
+  display: block;
+}
+.dropdown-item {
+  width: 100%;
+  display: block;
+}
+
+#account-img {
+  width: 2.3rem;
+  height: 2.3rem;
+}
+
+/* new-feed */
+#new-feed {
+  max-width: 140rem;
+  margin: 8rem auto 2rem;
+}
+
+/* Column 1 */
+.profile__avt {
+  width: 10rem;
+  height: 10rem;
+}
+
+#shortcut {
+  overflow: hidden;
+  padding-bottom: 0; /* ?! */
+}
+
+#my-photos-list {
+  padding: 2.5rem 3.4rem 1.8rem;
+}
+@media (max-width: 739px) {
+  #my-photos-list .col:nth-child(2) {
+    margin-top: 1.6rem;
+  }
+  #notifications,
+  #interest {
+    display: none;
+  }
+}
+
+#notifications {
+  position: relative;
+  overflow: hidden;
+}
+.quit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+/* Column 2 */
+.new-status {
+  border: solid 1px #ccc;
+}
+
+.status__avt {
+  width: 6rem;
+}
+
+@media (max-width: 739px) {
+  #new-feed > .row > .col:nth-child(2) {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-top: 6rem;
+  }
+}
+
+/* Column 3 */
+.accept {
+  background-color: rgb(76, 175, 80, 0.6);
+}
+.no-accept {
+  background-color: rgb(244, 67, 54, 0.6);
+}
+
+.Ads {
+  padding: 1.6rem 0;
+}
+.Bug {
+  padding: 3.2rem 0;
+}
+
+@media (max-width: 739px) {
+  #new-feed > .row > .col:nth-child(3) {
+    margin-top: 5rem;
+  }
+}
+
+/* footer */
+footer a:hover {
+  color: rgb(76, 175, 80);
+}
+
+@media (max-width: 739px) {
+  button {
+    padding-top: 1.2rem !important;
+    padding-bottom: 1.2rem !important;
+  }
+}

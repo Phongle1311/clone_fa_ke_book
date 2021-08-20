@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fa-KeBook</title>
+    <link rel="icon" href="./assets/img/fakebook.jpg" />
+    <link rel="stylesheet" href="./assets/css/grid.css" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/0dbb25d859.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="theme-l5">
+    <!-- Start Navbar-->
+    <nav class="font-l font-fix theme-d2" id="navbar">
+      <!-- tablet && pc nav -->
+      <a href="#" class="p-l theme-d4 gray-hover">
+        <i class="fas fa-home mr-16"></i>Logo
+      </a>
+      <a href="#" title="News" class="mobile-hidden p-l white-hover">
+        <i class="fas fa-globe-americas"></i>
+      </a>
+      <a
+        href="#"
+        title="Account Settings"
+        class="mobile-hidden p-l white-hover"
+      >
+        <i class="fas fa-user"></i>
+      </a>
+      <a href="#" title="Messages" class="mobile-hidden p-l white-hover">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <div class="mobile-hidden p-l gray-hover dropdown-hover">
+        <i class="fas fa-bell" title="Notifications"></i>
+        <span class="rad-50 font-s green-bg plr-8 right clearfix">3</span>
+        <div class="dropdown-menu white-bg">
+          <a href="#" class="dropdown-item gray-hover p-m"
+            >One new friend request</a
+          >
+          <a href="#" class="dropdown-item gray-hover p-m"
+            >John Doe posted on your wall</a
+          >
+          <a href="#" class="dropdown-item gray-hover p-m"
+            >Jane likes your post</a
+          >
+        </div>
+      </div>
+      <a
+        href="#"
+        title="My Account"
+        class="mobile-hidden p-l white-hover right clearfix"
+      >
+        <img
+          src="./assets/img/avt/avatar2.png"
+          alt="My Acount"
+          id="account-img"
+          class="rad-50"
+        />
+      </a>
+
+      <!-- mobile nav -->
+      <div
+        class="tablet-hidden pc-hidden p-l white-hover right clearfix"
+        id="toggle-bar"
+      >
+        <i class="fas fa-bars"></i>
+      </div>
+      <div
+        class="w-100 theme-d2 hidden tablet-hidden pc-hidden"
+        id="mobile-dropdown-menu"
+      >
+        <a href="#" class="dropdown-item gray-hover p-l">Link 1</a>
+        <a href="#" class="dropdown-item gray-hover p-l">Link 2</a>
+        <a href="#" class="dropdown-item gray-hover p-l">Link 3</a>
+        <a href="#" class="dropdown-item gray-hover p-l">My Profile</a>
+      </div>
+    </nav>
+    <!-- End Navbar-->
+
+    <!-- Start Grid -->
+    <div class="grid plr-16" id="new-feed">
+      <div class="row no-gap">
+        <!-- Start Column 1 -->
+        <div class="col l-3 m-3 s-12">
+          <!-- Profile -->
+          <div class="white-bg plr-16 p-fix w-100 rad-4 light-shadow">
+            <h4 class="center">My Profile</h4>
+            <p class="center">
+              <img
+                class="rad-50 profile__avt"
+                src="./assets/img/avt/avatar1.png"
+                alt="Avatar 1"
+              />
+            </p>
+            <hr />
+            <p>
+              <i class="text-theme mr-16 fas fa-pencil-alt"></i>Designer, UI
+            </p>
+            <p><i class="text-theme mr-16 fas fa-home mr-16"></i>London, UK</p>
+            <p>
+              <i class="text-theme mr-16 fas fa-birthday-cake"></i>April 1, 1988
+            </p>
+          </div>
+
+          <!-- Shortcut -->
+          <div class="light-shadow rad-4 p-fix mt-25" id="shortcut">
+            <button
+              class="
+                toggle-dropdown
+                p-m
+                theme-d1
+                w-100
+                align-left
+                gray-hover
+                font-m
+              "
+            >
+              <i class="mr-16 fas fa-circle-notch"></i>My Groups
+            </button>
+            <div class="hidden plr-16 p-fix white-bg shortcut-dropdown">
+              <p>Some text..</p>
+            </div>
+
+            <button
+              class="
+                toggle-dropdown
+                p-m
+                theme-d1
+                w-100
+                align-left
+                gray-hover
+                font-m
+              "
+            >
+              <i class="mr-16 far fa-calendar-check"></i>My Events
+            </button>
+            <div class="hidden plr-16 p-fix white-bg shortcut-dropdown">
+              <p>Some other texts..</p>
+            </div>
+
+            <button
+              class="
+                toggle-dropdown
+                p-m
+                theme-d1
+                w-100
+                align-left
+                gray-hover
+                font-m
+              "
+            >
+              <i class="mr-16 fas fa-users"></i>My Photos
+            </button>
+            <div
+              class="hidden grid white-bg shortcut-dropdown"
+              id="my-photos-list"
+            >
+              <div class="row">
+                <div class="col l-6 m-6 s-12">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt1.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt2.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12 mt-16">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt4.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12 mt-16">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt3.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12 mt-16">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt2.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12 mt-16">
+                  <div class="w-100">
+                    <img
+                      src="./assets/img/stt/stt5.jpg"
+                      alt="My Photos"
+                      class="w-100"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interest -->
+          <div
+            class="white-bg plr-16 p-fix mt-25 w-100 rad-4 light-shadow"
+            id="interest"
+          >
+            <p>Interest</p>
+            <p>
+              <span class="font-s plr-8 theme-d5">News</span>
+              <span class="font-s plr-8 theme-d4">W3School</span>
+              <span class="font-s plr-8 theme-d3">Labels</span>
+              <span class="font-s plr-8 theme-d2">Games</span>
+              <span class="font-s plr-8 theme-d1">Friend</span>
+              <span class="font-s plr-8 theme">Games</span>
+              <span class="font-s plr-8 theme-l1">Friends</span>
+              <span class="font-s plr-8 theme-l2">Food</span>
+              <span class="font-s plr-8 theme-l3">Design</span>
+              <span class="font-s plr-8 theme-l4">Art</span>
+              <span class="font-s plr-8 theme-l5">Photos</span>
+            </p>
+          </div>
+
+          <!-- Notifications -->
+          <div
+            class="plr-16 p-fix mt-25 w-100 rad-4 light-shadow theme-l4"
+            id="notifications"
+          >
+            <p><strong>Hey!</strong></p>
+            <p>People are looking at your profile. Find out who.</p>
+            <div class="quit theme-l3 p-m white-hover">
+              <i class="font-m fas fa-times"></i>
+            </div>
+          </div>
+        </div>
+        <!-- End Column 1 -->
+
+        <!-- Start Column 2 -->
+        <div class="col l-7 m-7 s-12 plr-16">
+          <!-- New status -->
+          <div class="p-m rad-4 light-shadow white-bg">
+            <p class="opacity-text">Social Media template by w3.css</p>
+            <p class="p-m new-status" contenteditable>Status: Feeling Blue</p>
+            <button class="theme p-m font-m">
+              <i class="fas fa-pencil-alt mr-8"></i>
+              Post
+            </button>
+          </div>
+
+          <!-- Status 1 -->
+          <div class="plr-16 mt-16 rad-4 light-shadow white-bg" id="stt1">
+            <br />
+            <img
+              src="./assets/img/avt/avatar2.png"
+              alt="John Doe avatar"
+              class="status__avt rad-50 mr-16 left"
+            />
+            <span class="opacity-text right font-m">1 min</span>
+            <h4>John Doe</h4>
+            <br />
+            <hr class="clearfix" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <div class="grid">
+              <div class="row">
+                <div class="col l-6 m-6 s-12 mb-16">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="./assets/img/stt/stt1.jpg"
+                      alt="Aurora"
+                    />
+                  </div>
+                </div>
+                <div class="col l-6 m-6 s-12 mb-16">
+                  <div class="w-100">
+                    <img
+                      class="w-100"
+                      src="./assets/img/stt/stt2.jpg"
+                      alt="Mountain"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-thumbs-up"></i> Like
+            </button>
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+          </div>
+
+          <!-- Status 2 -->
+          <div class="plr-16 mt-16 rad-4 light-shadow white-bg" id="stt2">
+            <br />
+            <img
+              src="./assets/img/avt/avatar3.png"
+              alt="Joan Doe avatar"
+              class="status__avt rad-50 mr-16 left"
+            />
+            <span class="opacity-text right font-m">16 min</span>
+            <h4>Joan Doe</h4>
+            <br />
+            <hr class="clearfix" />
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo consequat.
+            </p>
+
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-thumbs-up"></i> Like
+            </button>
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+          </div>
+
+          <!-- Status 3 -->
+          <div class="plr-16 mt-16 rad-4 light-shadow white-bg" id="stt3">
+            <br />
+            <img
+              src="./assets/img/avt/avatar2.png"
+              alt="Angie Jane avatar"
+              class="status__avt rad-50 mr-16 left"
+            />
+            <span class="opacity-text right font-m">32 min</span>
+            <h4>Angie Jane</h4>
+            <br />
+            <hr class="clearfix" />
+            <p>Have you seen this?</p>
+
+            <div class="w-100 mb-16">
+              <img class="w-100" src="./assets/img/stt/stt1.jpg" alt="Aurora" />
+            </div>
+
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-thumbs-up"></i> Like
+            </button>
+            <button class="theme-d1 p-m gray-hover mb-16 font-m">
+              <i class="fas fa-comment"></i> Comment
+            </button>
+          </div>
+        </div>
+        <!-- End Column 2 -->
+
+        <!-- Start Column 3 -->
+        <div class="col l-2 m-2 s-12">
+          <!-- Events -->
+          <div class="white-bg rad-4 light-shadow plr-16 p-fix center">
+            <p>Upcoming Events:</p>
+            <img
+              src="./assets/img/stt/stt3.jpg"
+              alt="bridge-moutain"
+              class="w-100"
+            />
+            <p><strong>Holiday</strong></p>
+            <p>Friday 15:00</p>
+            <button class="p-m font-m w-100 gray-hover theme-l4 mb-16">
+              Info
+            </button>
+          </div>
+
+          <!-- Request -->
+          <div class="white-bg rad-4 light-shadow plr-16 p-fix center mt-16">
+            <p>Friend Request</p>
+            <img
+              src="./assets/img/avt/avatar4.png"
+              alt="Joan Doe avatar"
+              class="w-50"
+            />
+            <br />
+            <span class="font-m">Joan Doe</span>
+
+            <div class="grid mt-16">
+              <div class="row no-gap">
+                <div class="col l-6 m-6 s-12">
+                  <button
+                    title="accept"
+                    class="p-m font-m w-100 gray-hover mb-16 accept white-text"
+                  >
+                    <i class="fas fa-check"></i>
+                  </button>
+                </div>
+                <div class="col l-6 m-6 s-12">
+                  <button
+                    title="decline"
+                    class="
+                      p-m
+                      font-m
+                      w-100
+                      gray-hover
+                      mb-16
+                      no-accept
+                      white-text
+                    "
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ads -->
+          <div class="white-bg rad-4 light-shadow center mt-16 Ads">
+            <p>ADS</p>
+          </div>
+
+          <!-- Bug -->
+          <div class="white-bg rad-4 light-shadow center mt-16 Bug">
+            <p><i class="font-xl fas fa-bug"></i></p>
+          </div>
+        </div>
+        <!-- End Column 3 -->
+      </div>
+    </div>
+    <!-- End Grid -->
+
+    <!-- Footer -->
+    <footer class="p-l theme-d3 mt-25">
+      <h4>Footer</h4>
+    </footer>
+
+    <footer class="plr-16 p-fix theme-d5">
+      <p class="plr-8">
+        Power by
+        <a href="https://www.w3schools.com/w3css/default.asp" target="_blank"
+          >w3.css</a
+        >
+      </p>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
